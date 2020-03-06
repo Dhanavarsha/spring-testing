@@ -12,6 +12,7 @@ import java.util.Optional;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.BDDMockito.anyString;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.MockitoAnnotations.initMocks;
@@ -74,5 +75,10 @@ public class ExampleControllerTest {
         String weather = subject.weather();
 
         assertThat(weather, is("Sorry, I couldn't fetch the weather for you :("));
+    }
+
+    @Test
+    public void sampleTestToCheckJenkinsSetup() {
+        assertTrue(true);
     }
 }
