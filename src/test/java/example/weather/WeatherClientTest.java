@@ -1,7 +1,9 @@
 package example.weather;
 
+import categories.UnitTests;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -16,6 +18,7 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.MockitoAnnotations.initMocks;
 
 @RunWith(SpringRunner.class)
+@Category(UnitTests.class)
 public class WeatherClientTest {
 
     private WeatherClient subject;

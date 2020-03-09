@@ -33,6 +33,18 @@ dependencies {
 	testImplementation('io.github.bonigarcia:webdrivermanager:3.7.1')
 }
 
-test {
-	useJUnitPlatform()
+task testUnit(type: Test) {
+	useJUnit {
+		includeCategories 'categories.UnitTests'
+		excludeCategories 'categories.IntegrationTests'
+	}
 }
+
+task testIntegration(type: Test) {
+	useJUnit {
+		excludeCategories 'categories.UnitTests'
+		includeCategories 'categories.IntegrationTests'
+	}
+}
+
+

@@ -1,9 +1,11 @@
 package example.weather;
 
+import categories.IntegrationTests;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import example.helper.FileLoader;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,6 +21,7 @@ import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Category(IntegrationTests.class)
 public class WeatherClientIntegrationTest {
 
     @Autowired

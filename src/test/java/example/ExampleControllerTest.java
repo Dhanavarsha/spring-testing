@@ -1,11 +1,13 @@
 package example;
 
+import categories.UnitTests;
 import example.person.Person;
 import example.person.PersonRepository;
 import example.weather.WeatherResponse;
 import example.weather.WeatherClient;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.mockito.Mock;
 
 import java.util.Optional;
@@ -17,6 +19,7 @@ import static org.mockito.BDDMockito.anyString;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.MockitoAnnotations.initMocks;
 
+@Category(UnitTests.class)
 public class ExampleControllerTest {
 
     private ExampleController subject;
